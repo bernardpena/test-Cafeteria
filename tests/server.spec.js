@@ -33,7 +33,7 @@ describe("POST /cafes", () => {
       nombre: "Café Mocha",
       descripcion: "Delicioso café con chocolate",
     };
-    // Cambia app por server
+
     const response = await request(server).post("/cafes").send(nuevoCafe);
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("nombre", nuevoCafe.nombre);
